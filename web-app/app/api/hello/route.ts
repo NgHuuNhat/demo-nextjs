@@ -1,5 +1,7 @@
-import { NextResponse } from 'next/server';
+import { getMessage } from "@/app/lib/getMessage";
+import { NextResponse } from "next/server";
 
-export function GET() {
-  return NextResponse.json({ message: 'success' });
+export async function GET() {
+  const data = await getMessage();
+  return NextResponse.json(data);
 }
