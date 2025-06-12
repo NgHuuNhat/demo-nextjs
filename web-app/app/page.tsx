@@ -2,6 +2,8 @@
 // 'use client';
 // import { useEffect, useState } from 'react';
 
+import { getBaseUrl } from "./lib/getBaseUrl";
+
 // export default function Home() {
 //   const [message, setMessage] = useState('');
 
@@ -21,7 +23,9 @@
 
 // call api Server Component
 export default async function Home() {
-  const res = await fetch('http://localhost:3001/api/hello', { cache: 'no-store' });
+  // const res = await fetch('http://localhost:3001/api/hello', { cache: 'no-store' });
+  // const { message } = await res.json();
+   const res = await fetch(`${getBaseUrl()}/api/hello`, { cache: 'no-store' });
   const { message } = await res.json();
 
   return (
