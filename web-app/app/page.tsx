@@ -23,10 +23,10 @@ import { getBaseUrl } from "./lib/getBaseUrl";
 
 // call api Server Component
 export default async function Home() {
-  // const res = await fetch('http://localhost:3001/api/hello', { cache: 'no-store' });
-  // const { message } = await res.json();
-   const res = await fetch(`${getBaseUrl()}/api/hello`, { cache: 'no-store' });
+  const res = await fetch('https://demo-nextjs-one.vercel/api/hello', { cache: 'no-store' });
   const { message } = await res.json();
+  //  const res = await fetch(`${getBaseUrl()}/api/hello`, { cache: 'no-store' });
+  // const { message } = await res.json();
 
   return (
     <main style={{ padding: 20 }}>
