@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
 
 export function GET() {
-  return NextResponse.json({ message: 'Hello from API!' });
+  return NextResponse.json({ message: 'success' });
 }
